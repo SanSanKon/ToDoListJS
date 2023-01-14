@@ -31,6 +31,10 @@ form {
     width: 100%;
 }
 
+form {
+    margin: 0 0 1rem;
+}
+
 @media screen and (max-width: 690px) {
     form {
         flex-direction: column;
@@ -40,20 +44,19 @@ form {
 .input-wrapper {
     display: flex;
     flex-direction: row;
+    margin: 0 1rem 0 0;
 }
 
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 690px) {
     .input-wrapper {
-        /* align-items: center; */
-        justify-content: center;
-        width: 80%;
+        margin: 0 0 1rem;
     }
 }
 
 @media screen and (max-width: 490px) {
-    .todo-input {
-        font-size: 1.5rem;
-        min-width: 60%;
+    .input-wrapper {
+        justify-content: center;
+        width: 80%;
     }
 }
 
@@ -82,6 +85,7 @@ form button:hover {
     align-items: center;
     display: flex;
     justify-content: center;
+    max-width: 100%;
 }
 
 .todo-list {
@@ -96,12 +100,26 @@ form button:hover {
     display: flex;
     font-size: 1.5rem;
     justify-content: space-between;
-    margin: 0.5rem;
+    max-width: 100%;
     transition: all 0.5s ease;
 }
 
 .todo li {
     flex: 1;
+}
+
+@media screen and (max-width: 490px) {
+    .todo-input {
+        font-size: 1rem;
+        min-width: 60%;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .todo-input,
+    .todo-button {
+        padding: 4px;
+    }
 }
 
 .complete-btn, 
@@ -118,8 +136,21 @@ form button:hover {
     background: #6491eb;
 }
 
+@media screen and (max-width: 376px) {
+    .complete-btn, 
+    .trash-btn {
+        padding: 0.75rem;     
+    }
+}
+
 .todo-item {
     padding: 0rem 0.5rem;
+}
+
+@media screen and (max-width: 490px) {
+    .todo-item {
+        font-size: 1rem;
+    }
 }
 
 .fa-trash,
@@ -149,8 +180,13 @@ select {
     width: 10rem;
 }
 
+@media screen and (max-width: 376px) {
+    select {
+        padding: 0.75rem;
+    }
+}
+
 .select {
-    margin: 1rem;
     overflow: hidden;
     position: relative;
 }
@@ -164,6 +200,12 @@ select {
     right: 0;
     transition: all 0.3s ease;
     top: 0;
+}
+
+@media screen and (max-width: 376px) {
+    .select::after {
+        padding: 0.75rem;
+    }
 }
 
 .select:hover::after {
